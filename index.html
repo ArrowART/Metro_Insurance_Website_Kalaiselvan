@@ -6,10 +6,453 @@
   <link href="./output.css" rel="stylesheet">
   <title>Metro Insurance</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./node_modules/@flaticon/flaticon-uicons/css/all/all.css">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <header class='sticky top-0 z-20 shadow-md py-4 px-4 sm:px-10 bg-[#004CA1] font-[sans-serif] min-h-[70px]'>
+    <div class='relative flex flex-wrap items-center justify-between gap-5'>
+      <a href="javascript:void(0)"><h1 class="text-3xl font-bold text-white">METRO</h1>
+      </a>
+      <div class='flex lg:order-1 max-sm:ml-auto'>
+        <button
+          class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>Get a quote
+        </button>
+        <button id="toggle" class='lg:hidden ml-7'>
+          <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <ul id="collapseMenu" class='lg:!flex lg:space-x-5 max-lg:space-y-2 max-lg:hidden max-lg:py-4 max-lg:w-full'>
+        <li class='max-lg:border-b max-lg:bg-[#007bff] max-lg:py-2 px-3 max-lg:rounded'>
+          <a href='javascript:void(0)'
+            class='lg:hover:text-[#007bff] text-white max-lg:text-white block font-semibold text-lg'>Home</a>
+        </li>
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
+            class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Services</a>
+        </li>
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
+            class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>About Us</a>
+        </li>
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
+            class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Insurance</a>
+        </li>
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
+            class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="bg-[url(./assets/images/family-moving-using-boxes.jpg)] bg-cover min-h-screen bg-no-repeat">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div class="flex items-center justify-center h-screen">
+            <div class="space-y-6 ">
+              <p class="text-2xl font-bold lg:text-5xl text-[#004CA1]">LIFE INSURANCE MORE </p>
+              <p class="text-2xl font-bold lg:text-5xl text-[#004CA1]">THAN JUST LIFETIME </p>
+              <p class="text-2xl font-bold lg:text-5xl text-[#004CA1]">PROTECTION</p>
+              <button class="p-3 text-white bg-black rounded-lg">
+                Lets get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] lg:h-[50vh] bg-cover bg-no-repeat flex items-center py-10">
+      <div class="max-w-[75rem] mx-auto">
+        <div class="grid grid-cols-1 gap-4 p-2 lg:grid-cols-3">
+          <div class="relative">
+            <div class="absolute top-0 right-0 flex items-center justify-center w-32 overflow-hidden rounded-bl-full h-28 bg-[#121D32]">
+              <img class="object-cover w-14" src="./assets/images/hand-holding-usd.png" alt="Image">
+            </div> 
+            <div class="p-4 pt-20 bg-white rounded-lg shadow-md">
+              <h1 class="font-semibold">Save your Money</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia est at eius earum illo odio voluptates, aut itaque velit ducimus rerum error qui quae. Possimus velit temporibus modi ea officiis!</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute top-0 right-0 flex items-center justify-center w-32 overflow-hidden rounded-bl-full h-28 bg-[#121D32]">
+                <img class="object-cover w-14" src="./assets/images/money-transfer-coin-arrow.png" alt="Image">
+            </div>            
+            <div class="p-4 pt-20 bg-white rounded-lg shadow-md">
+              <h1 class="font-semibold">Get a free quote</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia est at eius earum illo odio voluptates, 
+                aut itaque velit ducimus rerum error qui quae. Possimus velit temporibus modi ea officiis!</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute top-0 right-0 flex items-center justify-center w-32 overflow-hidden rounded-bl-full h-28 bg-[#121D32]">
+              <img class="object-cover w-14" src="./assets/images/time-fast.png" alt="Image">
+            </div> 
+            <div class="p-4 pt-20 bg-white rounded-lg shadow-md">
+              <h1 class="font-semibold">Fast & reliable</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia est at eius earum illo odio voluptates, 
+                aut itaque velit ducimus rerum error qui quae. Possimus velit temporibus modi ea officiis!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#11B0C9] lg:h-[75vh] flex items-center p-10">
+      <div class="max-w-[70rem] mx-auto">
+        <div class="grid grid-cols-1 gap-5 p-2 mb-5 lg:grid-cols-2">
+          <div class="relative">
+            <div class="absolute p-5 bg-[#024BA2] -bottom-10 -left-10">
+              <p class="text-xl font-bold text-center text-white">25+</p>
+              <p class="text-xl font-semibold text-white">YEARS OF <br>EXPERIENCE</p>
+            </div>
+            <div class="flex items-center justify-center">
+              <img class="h-auto max-w-full" src="./assets/images/family-moving-using-boxes-small.jpg" alt="">
+            </div>
+          </div>
+          <div class="my-9">
+            <div class="flex">
+              <span class="w-3 bg-white"></span>
+              <h1 class="p-2 font-semibold text-white bg-black w-fit">About Our company</h1>
+            </div>
+            <p class="py-4 text-4xl font-bold">Providing the Best Insurance Policy to Customers</p>
+            <p class="content-between py-4 leading-loose">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error omnis explicabo doloribus ipsa voluptates magnam, 
+              officia laborum. Amet fugit consequuntur alias veniam nemo labore magni fuga. Temporibus deserunt veritatis ea. 
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae adipisci ad delectus saepe atque, 
+              nobis temporibus repellat, officia impedit magnam suscipit, eius molestiae corporis quo? Facilis odit commodi ex animi.
+            </p>
+            <div class="py-5 lg:flex">
+              <div>
+                <button class="p-2 font-medium text-white bg-black w-28">Read More</button>
+              </div>
+              <div class="flex p-2 lg:mx-5 bg-white text-[#024BA2]">
+                <p class="text-[17px] font-medium">100% Success Rate</p>
+                <span class="w-1 mx-5 bg-black"></span>
+                <p class="text-[17px] font-medium">1000+ Satisfied Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] bg-cover bg-no-repeat min-h-screen">
+      <div class="py-20">
+      <div class="flex items-center justify-center">
+        <div class="flex">
+          <span class="bg-[#024BA2] w-3"></span>
+          <h1 class="p-3 text-xl text-white bg-black w-fit">OUR ALL SERVICES</h1>
+        </div>
+      </div>
+      <div class="py-10">
+        <h1 class="text-2xl font-bold text-center lg:text-5xl">What We Are Offering</h1>
+      </div>
+      <div class="max-w-[70rem] mx-auto ">
+        <div class="grid grid-cols-1 gap-5 p-3 lg:grid-cols-3">
+          <div class="bg-[#11B0C9] p-3">
+            <div class="flex items-center justify-center">
+              <div class="p-4 bg-white rounded-full">
+                <img src="./assets/images/crash.png" alt="" class="w-16 h-16 rounded-full">
+              </div>
+            </div>
+            <p class="my-3 text-xl font-semibold text-center">CAR INSURANCE</p>
+            <p class="leading-7 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptas officiis itaque molestias quod iste rerum 
+              accusamus neque, expedita laudantium dolorum sit praesentium necessitatibus consequuntur modi sequi illo delectus 
+              ullam.
+            </p>
+            <div class="flex items-center justify-center py-5">
+              <button class="p-3 text-white bg-black">More Details</button>
+            </div>
+          </div>
+          <div class="bg-[#11B0C9] p-3">
+            <div class="flex items-center justify-center">
+              <div class="p-4 bg-white rounded-full">
+                <img src="./assets/images/motorcycle.png" alt="" class="w-16 h-16 rounded-full">
+              </div>
+            </div>
+            <p class="my-3 text-xl font-semibold text-center">CAR INSURANCE</p>
+            <p class="leading-7 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptas officiis itaque molestias quod iste rerum 
+              accusamus neque, expedita laudantium dolorum sit praesentium necessitatibus consequuntur modi sequi illo delectus 
+              ullam.
+            </p>
+            <div class="flex items-center justify-center py-5">
+              <button class="p-3 text-white bg-black">More Details</button>
+            </div>
+          </div>
+          <div class="bg-[#11B0C9] p-3">
+            <div class="flex items-center justify-center">
+              <div class="p-4 bg-white rounded-full">
+                <img src="./assets/images/donation.png" alt="" class="w-16 h-16 rounded-full">
+              </div>
+            </div>
+            <p class="my-3 text-xl font-semibold text-center">CAR INSURANCE</p>
+            <p class="leading-7 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptas officiis itaque molestias quod iste rerum 
+              accusamus neque, expedita laudantium dolorum sit praesentium necessitatibus consequuntur modi sequi illo delectus 
+              ullam.
+            </p>
+            <div class="flex items-center justify-center py-5">
+              <button class="p-3 text-white bg-black">More Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section>
+      <div class="bg-[#121D32] lg:h-[39vh]">
+        <div class="max-w-[70rem] mx-auto py-10">
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <div class="">
+              <div class="flex p-4 bg-white">
+                <div class="bg-[#121D32] p-4 w-fit">
+                  <img src="./assets/images/clock-five.png" alt="" class="w-16 h-16">
+                </div>
+                <div class="flex items-center justify-center mx-4">
+                  <p class="text-2xl font-semibold text-[#121D32]">Renew Policy</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="flex p-4 bg-white">
+                <div class="bg-[#121D32] p-4 w-fit">
+                  <img src="./assets/images/file-download.png" alt="" class="w-16 h-16">
+                </div>
+                <div class="flex items-center justify-center mx-4">
+                  <p class="text-2xl font-semibold text-[#121D32]">Download Policy <br><span class="text-xl">Online</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="flex p-4 bg-white">
+                <div class="bg-[#121D32] p-4 w-fit">
+                  <img src="./assets/images/smile.png" alt="" class="w-16 h-16">
+                </div>
+                <div class="flex items-center justify-center mx-4">
+                  <p class="text-2xl font-semibold text-[#121D32]">10 Lacs + <br><span class="text-xl">Happy Customers</span></p>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="items-center justify-center gap-4 my-5 lg:flex">
+            <div class="">
+              <div class="flex p-4 bg-white">
+                <div class="bg-[#121D32] p-4 w-fit">
+                  <img src="./assets/images/google.png" alt="" class="w-16 h-16">
+                </div>
+                <div class="flex items-center justify-center mx-4">
+                  <p class="text-2xl font-semibold text-[#121D32]">4.9 Rating <br><span class="text-xl">Rates on Google</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="my-4 lg:my-0">
+              <div class="flex p-4 bg-white">
+                <div class="bg-[#121D32] p-4 w-fit">
+                  <img src="./assets/images/indian-rupee-sign.png" alt="" class="w-16 h-16">
+                </div>
+                <div class="flex items-center justify-center mx-4">
+                  <p class="text-2xl font-semibold text-[#121D32]">1k + <br><span class="text-xl">Claims Served</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] bg-cover bg-no-repeat min-h-screen py-10">
+      <div class="py-10">
+        <div class="flex items-center justify-center">
+          <div class="flex">
+            <span class="bg-[#024BA2] w-3"></span>
+            <h1 class="p-3 text-xl text-white bg-black w-fit">OUR INSURANCE PARTNERS</h1>
+          </div>
+        </div>
+        <div class="my-10">
+          <h1 class="text-2xl font-bold text-center lg:text-5xl">Life & General Insurance Companies</h1>
+        </div>
+      </div>
+      <div class="max-w-[60rem] mx-auto">
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div>
+            <img src="./assets/images/insurance-companies/aadhiya-birla.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/birla-sunlife.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/kotak.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/NAVI-HEALTH-INSURANCE.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/zuno.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/Bajaj-Allianz-General-Insurance-Co.-Ltd.-1.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/icici-insurance.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/Life-Insurance-Corporation-of-India-IPO.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/sbi-insurance.png" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/shriram-gen.png" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/Tata_AIA_Life_Ins_New.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+          <div>
+            <img src="./assets/images/insurance-companies/digit.jpg" alt="" class="shadow-md h-28 w-52">
+          </div>
+        </div>
+      </div>
+      <div class="my-10 text-center">
+        <h1 class="text-2xl font-bold text-center lg:text-5xl">What our clients say's</h1>
+      </div>
+      <div class="max-w-[60rem] mx-auto">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <div class="bg-[#11B0C9] p-5">
+            <div class="flex">
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+            </div>
+            <div>
+              <p class="font-semibold leading-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae error porro voluptatum. 
+                Omnis in, similique amet tempora sapiente quidem dolorum obcaecati nam non inventore perferendis ducimus laborum 
+                dicta asperiores. Voluptas.</p>
+            </div>
+            <div class="relative">
+              <p class="h-1 mt-8 bg-white"></p>
+              <div class="absolute right-5 -top-4">
+                <img src="./assets/images/right-quotes.png" alt="" class="w-10 h-10">
+              </div>
+            </div>
+            <div class="flex my-5">
+              <img src="./assets/images/OIP.jpg" alt="" class="w-16 h-16">
+              <p class="mx-5 text-xl font-semibold">Remedios Linared</p>
+            </div>
+          </div>
+          <div class="bg-[#11B0C9] p-5">
+            <div class="flex">
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+            </div>
+            <div>
+              <p class="font-semibold leading-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae error porro voluptatum. 
+                Omnis in, similique amet tempora sapiente quidem dolorum obcaecati nam non inventore perferendis ducimus laborum 
+                dicta asperiores. Voluptas.</p>
+            </div>
+            <div class="relative">
+              <p class="h-1 mt-8 bg-white"></p>
+              <div class="absolute right-5 -top-4">
+                <img src="./assets/images/right-quotes.png" alt="" class="w-10 h-10">
+              </div>
+            </div>
+            <div class="flex my-5">
+              <img src="./assets/images/OIP.jpg" alt="" class="w-16 h-16">
+              <p class="mx-5 text-xl font-semibold">Remedios Linared</p>
+            </div>
+          </div>
+          <div class="bg-[#11B0C9] p-5">
+            <div class="flex">
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+              <p><i class="fi fi-sr-star" style="color: #FFD43B;"></i></p>
+            </div>
+            <div>
+              <p class="font-semibold leading-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae error porro voluptatum. 
+                Omnis in, similique amet tempora sapiente quidem dolorum obcaecati nam non inventore perferendis ducimus laborum 
+                dicta asperiores. Voluptas.</p>
+            </div>
+            <div class="relative">
+              <p class="h-1 mt-8 bg-white"></p>
+              <div class="absolute right-5 -top-4">
+                <img src="./assets/images/right-quotes.png" alt="" class="w-10 h-10">
+              </div>
+            </div>
+            <div class="flex my-5">
+              <img src="./assets/images/OIP.jpg" alt="" class="w-16 h-16">
+              <p class="mx-5 text-xl font-semibold">Remedios Linared</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#0a4275]">
+    <div class="max-w-[85rem] mx-auto">
+    <div class="px-6 py-12 sm:px-10">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <a href='javascript:void(0)'><h1 class="text-3xl font-bold text-white">METRO</h1></a>
+          <p class="text-gray-300 text-[15px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        </div>
+        <div>
+          <h4 class="mb-6 text-lg font-semibold text-white">Navigation</h4>
+          <ul class="space-y-4">
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Home</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">About</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Services</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-6 text-lg font-semibold text-white">Follow Us</h4>
+          <ul class="flex space-x-5">
+            <li><a href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="inline w-6 h-6 fill-gray-300 hover:fill-white"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7v-7h-2v-3h2V8.5A3.5 3.5 0 0 1 15.5 5H18v3h-2a1 1 0 0 0-1 1v2h3v3h-3v7h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"
+                  clip-rule="evenodd" />
+              </svg></a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="inline w-6 h-6 fill-gray-300 hover:fill-white"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                  d="M21 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5zm-2.5 8.2v5.3h-2.79v-4.93a1.4 1.4 0 0 0-1.4-1.4c-.77 0-1.39.63-1.39 1.4v4.93h-2.79v-8.37h2.79v1.11c.48-.78 1.47-1.3 2.32-1.3 1.8 0 3.26 1.46 3.26 3.26zM6.88 8.56a1.686 1.686 0 0 0 0-3.37 1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 1.57v8.37H5.5v-8.37h2.77z"
+                  clip-rule="evenodd" />
+              </svg></a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="inline w-6 h-6 fill-gray-300 hover:fill-white"
+                viewBox="0 0 24 24">
+                <path
+                  d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z" />
+              </svg></a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="inline w-6 h-6 fill-gray-300 hover:fill-white"
+                viewBox="0 0 24 24">
+                <path
+                  d="M22.92 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.83 4.5 17.72 4 16.46 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.9 20.29 6.16 21 8.58 21c7.88 0 12.21-6.54 12.21-12.21 0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+              </svg></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-6 text-lg font-semibold text-white">Contact Us</h4>
+          <div class="space-y-4">
+            <p class="text-gray-300 text-[15px]">123 Street, City Name</p>
+            <p class="text-gray-300 text-[15px]">metroinsurance@gmail.com</p>
+            <p class="text-gray-300 text-[15px]">+1 234 567 890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="text-center py-5 bg-[#08355e]">
+      <p class='text-gray-300 text-[15px]'>© 2024 All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
+<script src="./js/script.js"></script>
 </html>
