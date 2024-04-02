@@ -6,18 +6,21 @@
   <link href="./output.css" rel="stylesheet">
   <title>Metro Insurance</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./node_modules/@flaticon/flaticon-uicons/css/all/all.css">
   <link href="https://cdn.jsdelivr.net/npm/flat-icons@1.0/creative.min.css" rel="stylesheet">
 </head>
 <body>
   <header class='sticky top-0 z-20 shadow-md py-4 px-4 sm:px-10 bg-[#004CA1] min-h-[70px]'>
     <div class='relative flex flex-wrap items-center justify-between gap-5'>
-      <a href="javascript:void(0)"><h1 class="text-3xl font-bold text-white">METRO</h1>
+      <a href="#home"><h1 class="text-3xl font-bold text-white">METRO</h1>
       </a>
       <div class='flex lg:order-1 max-sm:ml-auto'>
-        <button
-          class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>Get a quote
-        </button>
+        <a href="#getaquote">
+          <button
+            class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>Get a quote
+          </button>
+        </a>
         <button id="toggle" class='lg:hidden ml-7'>
           <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
@@ -28,33 +31,33 @@
       </div>
       <ul id="collapseMenu" class='lg:!flex lg:space-x-5 max-lg:space-y-2 max-lg:hidden max-lg:py-4 max-lg:w-full'>
         <li class='max-lg:border-b max-lg:bg-[#007bff] max-lg:py-2 px-3 max-lg:rounded'>
-          <a href='javascript:void(0)'
+          <a href='#home'
             class='lg:hover:text-[#007bff] text-white max-lg:text-white block font-semibold text-lg'>Home</a>
         </li>
-        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
-            class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Services</a>
-        </li>
-        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#aboutus'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>About Us</a>
+        </li>
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#services'
+            class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Services</a>
         </li>
         <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Insurance</a>
         </li>
-        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='javascript:void(0)'
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#contact'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Contact Us</a>
         </li>
       </ul>
     </div>
   </header>
   <main>
-    <section class="bg-[url(./assets/images/family-moving-using-boxes.jpg)] bg-cover h-[90vh] bg-no-repeat">
+    <section class="bg-[url(./assets/images/family-moving-using-boxes.jpg)] bg-cover h-[90vh] bg-no-repeat" id="home">
       <div class="mx-auto max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-2">
-          <div class="flex items-center justify-center h-screen">
+          <div class="flex items-center justify-center mx-10 my-44">
             <div class="space-y-6 ">
-              <p class="text-2xl font-bold lg:text-5xl text-[#004CA1]">LIFE INSURANCE MORE </p>
-              <p class="text-2xl font-bold lg:text-5xl text-[#004CA1]">THAN JUST LIFETIME </p>
-              <p class="text-2xl font-bold lg:text-5xl text-[#004CA1]">PROTECTION</p>
+              <p class="text-2xl font-bold lg:text-3xl text-[#004CA1]">SECURE COVERAGE FOR YOUR FUTURE</p>
+              <p class="text-2xl font-bold lg:text-3xl text-[#004CA1]">EXPERT ADVICE, TAILORED SOLUTIONS</p>
+              <p class="text-2xl font-bold lg:text-3xl text-[#004CA1]">STREAMLINED EXPERIENCE</p>
               <button class="p-3 text-white bg-black rounded-lg">
                 Lets get Started
               </button>
@@ -98,7 +101,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#11B0C9] lg:h-[75vh] flex items-center p-10">
+    <section class="bg-[#11B0C9] lg:h-[75vh] flex items-center p-10" id="aboutus">
       <div class="max-w-[70rem] mx-auto">
         <div class="grid grid-cols-1 gap-5 p-2 mb-5 lg:grid-cols-2">
           <div class="relative">
@@ -121,11 +124,11 @@
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae adipisci ad delectus saepe atque, 
               nobis temporibus repellat, officia impedit magnam suscipit, eius molestiae corporis quo? Facilis odit commodi ex animi.
             </p>
-            <div class="py-5 lg:flex">
+            <div class="py-5 lg:flex w-fit">
               <div>
                 <button class="p-2 font-medium text-white bg-black w-28">Read More</button>
               </div>
-              <div class="flex p-2 lg:mx-5 bg-white text-[#024BA2]">
+              <div class="flex p-2 lg:mx-5 py-2 bg-white text-[#024BA2]">
                 <p class="text-[17px] font-medium">100% Success Rate</p>
                 <span class="w-1 mx-5 bg-black"></span>
                 <p class="text-[17px] font-medium">1000+ Satisfied Clients</p>
@@ -135,7 +138,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] bg-cover bg-no-repeat min-h-screen">
+    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] bg-cover bg-no-repeat lg:h-[88vh] p-2" id="services">
       <div class="py-20">
       <div class="flex items-center justify-center">
         <div class="flex">
@@ -146,8 +149,9 @@
       <div class="py-10">
         <h1 class="text-2xl font-bold text-center lg:text-5xl">What We Are Offering</h1>
       </div>
-      <div class="max-w-[70rem] mx-auto ">
-        <div class="grid grid-cols-1 gap-5 p-3 lg:grid-cols-3">
+      <div class="max-w-[85rem] mx-auto swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
           <div class="bg-[#11B0C9] p-3">
             <div class="flex items-center justify-center">
               <div class="p-4 bg-white rounded-full">
@@ -163,6 +167,8 @@
               <button class="p-3 text-white bg-black">More Details</button>
             </div>
           </div>
+        </div> 
+        <div class="swiper-slide">
           <div class="bg-[#11B0C9] p-3">
             <div class="flex items-center justify-center">
               <div class="p-4 bg-white rounded-full">
@@ -178,6 +184,8 @@
               <button class="p-3 text-white bg-black">More Details</button>
             </div>
           </div>
+        </div>
+        <div class="swiper-slide">
           <div class="bg-[#11B0C9] p-3">
             <div class="flex items-center justify-center">
               <div class="p-4 bg-white rounded-full">
@@ -194,11 +202,47 @@
             </div>
           </div>
         </div>
+        <div class="swiper-slide">
+          <div class="bg-[#11B0C9] p-3">
+            <div class="flex items-center justify-center">
+              <div class="p-4 bg-white rounded-full">
+                <img src="./assets/images/real-estate.png" alt="" class="w-16 h-16 rounded-full">
+              </div>
+            </div>
+            <p class="my-3 text-xl font-semibold text-center">HOME INSURANCE</p>
+            <p class="leading-7 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptas officiis itaque molestias quod iste rerum 
+              accusamus neque, expedita laudantium dolorum sit praesentium necessitatibus consequuntur modi sequi illo delectus 
+              ullam.
+            </p>
+            <div class="flex items-center justify-center py-5">
+              <button class="p-3 text-white bg-black">More Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-[#11B0C9] p-3">
+            <div class="flex items-center justify-center">
+              <div class="p-4 bg-white rounded-full">
+                <img src="./assets/images/heart.png" alt="" class="w-16 h-16 rounded-full">
+              </div>
+            </div>
+            <p class="my-3 text-xl font-semibold text-center">LIFE INSURANCE</p>
+            <p class="leading-7 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptas officiis itaque molestias quod iste rerum 
+              accusamus neque, expedita laudantium dolorum sit praesentium necessitatibus consequuntur modi sequi illo delectus 
+              ullam.
+            </p>
+            <div class="flex items-center justify-center py-5">
+              <button class="p-3 text-white bg-black">More Details</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
     </section>
     <section>
-      <div class="bg-[#121D32] lg:h-[39vh]">
+      <div class="bg-[#121D32] lg:h-[39vh] p-2">
         <div class="max-w-[70rem] mx-auto py-10">
           <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
             <div class="">
@@ -269,7 +313,7 @@
           <h1 class="text-2xl font-bold text-center lg:text-5xl">Life & General Insurance Companies</h1>
         </div>
       </div>
-      <div class="max-w-[60rem] mx-auto">
+      <div class="max-w-[60rem] mx-auto p-2">
         <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
           <div>
             <img src="./assets/images/insurance-companies/aadhiya-birla.jpg" alt="" class="shadow-md h-28 w-52">
@@ -309,10 +353,10 @@
           </div>
         </div>
       </div>
-      <div class="my-10 text-center">
+      <div class="text-center my-14">
         <h1 class="text-2xl font-bold text-center lg:text-5xl">What our clients say's</h1>
       </div>
-      <div class="max-w-[60rem] mx-auto">
+      <div class="max-w-[60rem] mx-auto py-10">
         <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
           <div class="bg-[#11B0C9] p-5">
             <div class="flex">
@@ -389,8 +433,38 @@
         </div>
       </div>
     </section>
+    <section class="relative" id="getaquote">
+      <div class="relative flex">
+        <div class="bg-[url(./assets/images/get-a-quote-bg.jpg)] bg-no-repeat bg-cover h-[80vh] w-[65%]"></div>
+        <div class="bg-[url(./assets/images/Layer31.png)] bg-[#11B0C9] h-[80vh] w-[35%]"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-2 lg:ml-[200px]">
+          <div class="p-6  bg-[#172848] shadow-md lg:w-[30%]">
+            <div class="flex">
+              <span class="bg-[#024BA2] w-4"></span>
+              <h1 class="p-3 text-xl font-bold text-black bg-white w-fit">Get a Quote</h1>
+            </div>
+            <p class="my-4 text-5xl font-bold text-white">INSURANCE QUOTE</p>
+            <form action="">
+              <input type="text" name="" id="" placeholder="Full name" class="w-full p-3" required>
+              <input type="email" name="" id="" placeholder="Email address" class="w-full p-3 my-3" required>
+              <select name="" id="" class="w-full p-3" required>
+                <option value="">Select type of Insurance</option>
+                <option value="Car Insurance">Car Insurance</option>
+                <option value="Car Insurance">Bike Insurance</option>
+                <option value="Car Insurance">Personal Accident</option>
+                <option value="Car Insurance">Home Insurance</option>
+                <option value="Car Insurance">Life Insurance</option>
+              </select>
+              <div class="my-4">
+                <button type="submit" class="p-2 w-fit bg-[#024BA2] hover:bg-[#11B0C9] text-white text-xl ">Submit Now</button>
+              </div>
+            </form>
+          </div>
+      </div>
+      </div>
+    </section>
   </main>
-  <footer class="bg-[#0a4275]">
+  <footer class="bg-[#0a4275]" id="contact">
     <div class="max-w-[85rem] mx-auto">
     <div class="px-6 py-12 sm:px-10">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
@@ -402,10 +476,10 @@
         <div>
           <h4 class="mb-6 text-lg font-semibold text-white">Navigation</h4>
           <ul class="space-y-4">
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Home</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">About</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Services</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Contact</a></li>
+            <li><a href="#home" class="text-gray-300 hover:text-white text-[15px]">Home</a></li>
+            <li><a href="#aboutus" class="text-gray-300 hover:text-white text-[15px]">About</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white text-[15px]">Services</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white text-[15px]">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -455,5 +529,43 @@
     </div>
   </footer>
 </body>
+<script src="./assets/vendors/swiper/swiper-bundle.min.js"></script>
 <script src="./js/script.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
 </html>
