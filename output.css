@@ -787,6 +787,18 @@ video {
   height: auto;
 }
 
+.h-20{
+  height: 5rem;
+}
+
+.h-32{
+  height: 8rem;
+}
+
+.h-36{
+  height: 9rem;
+}
+
 .max-h-full{
   max-height: 100%;
 }
@@ -866,6 +878,14 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.w-36{
+  width: 9rem;
 }
 
 .max-w-7xl{
@@ -1075,6 +1095,26 @@ video {
 
 .bg-\[url\(\.\/assets\/images\/pattern-png-transparent-4\.png\)\]{
   background-image: url(./assets/images/pattern-png-transparent-4.png);
+}
+
+.bg-\[url\(\.\/assets\/images\/indian-family\.jpg\)\]{
+  background-image: url(./assets/images/indian-family.jpg);
+}
+
+.bg-\[url\(\.\/assets\/images\/portrait-happy-rural-indian-family-600nw-2015981504\.jpg\)\]{
+  background-image: url(./assets/images/portrait-happy-rural-indian-family-600nw-2015981504.jpg);
+}
+
+.bg-\[url\(\.\/assets\/images\/family-pic\.jpg\)\]{
+  background-image: url(./assets/images/family-pic.jpg);
+}
+
+.bg-\[url\(\.\/assets\/images\/n-INDIAN-FAMILY-628x314\.jpg\)\]{
+  background-image: url(./assets/images/n-INDIAN-FAMILY-628x314.jpg);
+}
+
+.bg-\[url\(\.\/assets\/images\/investor-education-ed-photo-1\.jpg\)\]{
+  background-image: url(./assets/images/investor-education-ed-photo-1.jpg);
 }
 
 .bg-cover{
@@ -1524,6 +1564,11 @@ html, body {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .lg\:hover\:text-\[\#007bff\]:hover{
