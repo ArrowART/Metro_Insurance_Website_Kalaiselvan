@@ -88,4 +88,13 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxU00nCUzD9YLCzybkojx
     .then(response => alert("Thank you! your form is submitted successfully."))
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
+  });
+
+  const form1 = document.forms['submit-to-google-sheet1']
+  form1.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form1) })
+    .then(response => alert("Thank you! your form is submitted successfully."))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
   })
