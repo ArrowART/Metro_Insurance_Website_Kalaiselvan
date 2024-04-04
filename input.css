@@ -19,3 +19,20 @@ html, body {
   .animate-zoomIn {
     animation: zoomIn 0.5s forwards;
   }
+
+  .loading {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  .loading1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
