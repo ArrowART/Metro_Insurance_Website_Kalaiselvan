@@ -41,13 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: 'smooth'
       });
   });
-  document.querySelector('a[href="#buyinsurance"]').addEventListener('click', function (e) {
+    document.querySelector('a[href="#buyinsurance"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('#buyinsurance').scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+  document.querySelector('a[href="#insurancequery"]').addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector('#buyinsurance').scrollIntoView({
+    document.querySelector('#insurancequery').scrollIntoView({
         behavior: 'smooth'
     });
 });
 });
+
+// Previous Dates are not allowed
 
 const currentDate = new Date();
 const year = currentDate.getFullYear();
@@ -68,6 +76,7 @@ const minutes1 = currentDate.getMinutes().toString().padStart(2, '0');
 const formattedDate1 = `${year}-${month}-${day}T${hours}:${minutes}`;
 document.getElementById('datetime1').setAttribute('min', formattedDate);
 
+// Modal
 
 function myModel() {
   let modal = document.getElementById("modal");
@@ -91,6 +100,7 @@ function myModel1() {
   }
 }
 
+// Data to Google Sheet
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxU00nCUzD9YLCzybkojxVsKOHlHGPh0PxVqdNWXrMRdL91PJjC-gYGe0HyvNIlIhTf1A/exec';
 const form = document.forms['submit-to-google-sheet'];
 const loadingIndicator = document.querySelector('.loading');
@@ -153,5 +163,3 @@ form.addEventListener('submit', e => {
   
     window.open(url, '_blank').focus();
   }
-  
-  
