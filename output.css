@@ -920,6 +920,18 @@ video {
   max-width: 90rem;
 }
 
+.max-w-\[100rem\]{
+  max-width: 100rem;
+}
+
+.max-w-\[95rem\]{
+  max-width: 95rem;
+}
+
+.max-w-\[96rem\]{
+  max-width: 96rem;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1194,6 +1206,21 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-40{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.py-32{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .text-center{
@@ -1596,6 +1623,11 @@ html, body {
   .lg\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .lg\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .lg\:text-5xl{
