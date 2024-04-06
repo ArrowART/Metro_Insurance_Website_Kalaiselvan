@@ -48,6 +48,9 @@
         <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#insurancequery'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Insurance</a>
         </li>
+        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='referrals.html'
+          class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Referrals</a>
+      </li>
         <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#contact'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Contact Us</a>
         </li>
@@ -104,6 +107,8 @@
                     </select>
                     <input type="text" name="Full-name"  placeholder="Full name" class="w-full p-3 my-3 rounded-md" required>
                     <input type="email" name="Email"  placeholder="Email address" class="w-full p-3 rounded-md" required>
+                    <input type="text" name="Contactnumber"  placeholder="Email Mobile number" class="w-full p-3 my-3 rounded-md" required>
+                    <input type="text" name="Location"  placeholder="Email your Address" class="w-full p-3 rounded-md" required>
            
                     <div class="my-4">
                       <button type="submit" value="Submit" id="submit" class="rounded-md p-2 w-fit bg-[#11B0C9] hover:bg-[#024BA2] text-white text-lg ">Submit Now</button>
@@ -148,6 +153,8 @@
                   </select>
                   <input type="text" name="Full-name1" placeholder="Full name" class="w-full p-3 my-3 rounded-md name" required>
                   <input type="email" name="Email1" placeholder="Email address" class="w-full p-3 rounded-md email" required>
+                  <input type="text" name="Contactnumber1"  placeholder="Email Mobile number" class="w-full p-3 my-3 rounded-md" required>
+                  <input type="text" name="Location1"  placeholder="Email your Address" class="w-full p-3 rounded-md" required>
                   <textarea name="message1" class="w-full p-3 my-3 rounded-md message" placeholder="Leave your Message"></textarea>
                   <div class="my-4">
                     <button type="submit" value="Submit" id="submit" class="rounded-md p-2 w-20 bg-[#11B0C9] hover:bg-[#024BA2] text-white text-lg">Send</button>
@@ -234,8 +241,8 @@
         </div>
       </div>
     </section>
-    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] bg-cover bg-no-repeat lg:h-[70vh] p-2" id="services">
-      <div class="py-10">
+    <section class="bg-[url(./assets/images/pattern-png-transparent-4.png)] py-10 bg-cover bg-no-repeat lg:h-[70vh] p-2" id="services">
+      <div class="">
       <div class="flex items-center justify-center">
         <div class="flex">
           <span class="bg-[#024BA2] rounded-l-md w-3"></span>
@@ -345,7 +352,7 @@
     </div>
     </section>
     <section>
-      <div class="bg-[#121D32] xl:h-[39vh] p-2">
+      <div class="bg-[#121D32] xl:h-[39vh] p-2 ">
         <div class="max-w-[75rem] mx-auto py-10">
           <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
             <div class="">
@@ -456,37 +463,46 @@
           </div>
         </div>
       </div>
-      <section class="py-10 mt-10 bg-[#121D32]" id="insurancequery">
-        <div class="max-w-5xl mx-auto space-y-3">
-          <h1 class="text-2xl font-bold text-center text-white lg:text-5xl">Want to know about Your Policy?</h1>
-          <p class="text-lg text-center text-white lg:text-xl">Understand the benefits of your policy by reviewing the terms and conditions in clear language. Identify the strengths, weaknesses, and any missing features in your insurance coverage.</p>
-        </div>
-        <div class="mx-auto mt-5 max-w-fit">
-          <div class="flex flex-wrap gap-4 p-4 bg-white rounded-lg">
-            <div>
-              <select id="insuranceType" class="w-full p-3 border-2 rounded-xl">
-                <option value="">Select Insurance</option>
-                <option value="Car Insurance">Car Insurance</option>
-                <option value="Bike Insurance">Bike Insurance</option>
-                <option value="Personal Accident">Personal Accident</option>
-                <option value="Home Insurance">Home Insurance</option>
-                <option value="Life Insurance">Life Insurance</option>
-              </select>
+      <section class="mt-10 bg-[#121D32] lg:h-[60vh] " id="insurancequery">
+        <div class="max-w-[80rem] mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 ">
+            <div class="">
+              <img src="./assets/images/family-insurance.png" alt="" class="lg:h-[60vh]">
             </div>
-            <div>
-              <select id="selectBox1" class="w-full p-3 border-2 rounded-xl">
-                <option value="">Select an Option</option>
-              </select>
-            </div>
-            <div>
-              <select id="selectBox2" class="w-full p-3 border-2 rounded-xl">
-                <option value="">Select an Option</option>
-              </select>
-            </div>
-            <div>
-              <button id="checkNow" class="p-3 text-white bg-[#007bff] rounded-lg w-36">Check Now</button>
+            <div class="py-10">
+              <div class="max-w-4xl mx-auto space-y-3">
+                <h1 class="text-2xl font-bold text-center text-white lg:text-5xl">Want to know about Your Policy?</h1>
+                <p class="text-lg text-center text-white lg:text-xl">Understand the benefits of your policy by reviewing the terms and conditions in clear language. Identify the strengths, weaknesses, and any missing features in your insurance coverage.</p>
+              </div>
+              <div class="p-2 mx-auto mt-5 max-w-fit">
+                <div class="flex flex-wrap gap-4 p-4 bg-white rounded-lg">
+                  <div>
+                    <select id="insuranceType" class="w-full p-3 border-2 rounded-xl">
+                      <option value="">Select Insurance</option>
+                      <option value="Car Insurance">Car Insurance</option>
+                      <option value="Bike Insurance">Bike Insurance</option>
+                      <option value="Personal Accident">Personal Accident</option>
+                      <option value="Home Insurance">Home Insurance</option>
+                      <option value="Life Insurance">Life Insurance</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select id="selectBox1" class="w-full p-3 border-2 rounded-xl">
+                      <option value="">Select an Option</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select id="selectBox2" class="w-full p-3 border-2 rounded-xl">
+                      <option value="">Select an Option</option>
+                    </select>
+                  </div>
+                  <div>
+                    <button id="checkNow" class="p-3 text-white bg-[#007bff] rounded-lg w-36">Check Now</button>
+                  </div>
+                </div>
             </div>
           </div>
+        </div>
       </div>
       </section>
       <div class="my-10 text-center">
@@ -597,6 +613,8 @@
               </select>
               <input type="text" name="Full-name"  placeholder="Full name" class="w-full p-3 my-3 rounded-md" required>
               <input type="email" name="Email"  placeholder="Email address" class="w-full p-3 rounded-md" required>
+              <input type="text" name="Contactnumber"  placeholder="Email Mobile number" class="w-full p-3 my-3 rounded-md" required>
+              <input type="text" name="Location"  placeholder="Email your Address" class="w-full p-3 rounded-md" required>
               <div class="my-4">
                 <button type="submit" value="Submit" id="submit" class="rounded-md p-2 w-fit bg-[#007bff] hover:bg-[#024BA2] text-white text-lg ">Submit Now</button>
               </div>

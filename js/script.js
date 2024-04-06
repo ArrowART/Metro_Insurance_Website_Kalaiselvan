@@ -1,4 +1,3 @@
-// nav bar
 var toggleBtn = document.getElementById('toggle');
 var collapseMenu = document.getElementById('collapseMenu');
 
@@ -29,11 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // Scroll to About Us section
   document.querySelector('a[href="#aboutus"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector('#aboutus').scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
+    e.preventDefault();
+    const section = document.querySelector('#aboutus');
+    const offsetTop = section.offsetTop;
+    const windowHeight = window.innerHeight;
+    const sectionHeight = section.offsetHeight;
+    const scrollTo = offsetTop - (windowHeight - sectionHeight) / 2;
+    window.scrollTo({
+        top: scrollTo,
+        behavior: 'smooth'
+    });
+});
     // Scroll to Home section
     document.querySelector('a[href="#home"]').addEventListener('click', function (e) {
       e.preventDefault();
@@ -49,10 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   document.querySelector('a[href="#insurancequery"]').addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector('#insurancequery').scrollIntoView({
+    const section = document.querySelector('#insurancequery');
+    const offsetTop = section.offsetTop;
+    const windowHeight = window.innerHeight;
+    const sectionHeight = section.offsetHeight;
+    const scrollTo = offsetTop - (windowHeight - sectionHeight) / 2;
+    window.scrollTo({
+        top: scrollTo,
         behavior: 'smooth'
     });
 });
+
 });
 
 // Previous Dates are not allowed
@@ -146,11 +158,16 @@ form.addEventListener('submit', e => {
     var email = formData.get('Email1');
     var insurance = formData.get('Insurance1');
     var message = formData.get('message1');
+    var Contactnumber = formData.get('Contactnumber1');
+    var Location = formData.get('Location1');
+
   
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Insurance:', insurance);
     console.log('Message:', message);
+    console.log('ContactNumbee:' ,Contactnumber);
+    console.log('Location:' ,Location);
   
     var phonenumber = "8124213593"; 
     var url = "https://wa.me/" + phonenumber + "?text=" +
@@ -158,6 +175,8 @@ form.addEventListener('submit', e => {
       "*Email:* " + email + "%0a" +
       "*Insurance:* " + insurance + "%0a" +
       "*Message:* " + message +
+      "*Mobile Number:* " + Contactnumber +
+      "*Location:* " + Location +
       "%0a%0a" +
       "";
   
