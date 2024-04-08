@@ -46,12 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: 'smooth'
       });
   });
-    document.querySelector('a[href="#buyinsurance"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector('#buyinsurance').scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
+  document.querySelector('a[href="#buyinsurance"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    const section = document.querySelector('#buyinsurance');
+    const offsetTop = section.offsetTop;
+    const windowHeight = window.innerHeight;
+    const sectionHeight = section.offsetHeight;
+    const scrollTo = offsetTop - (windowHeight - sectionHeight) / 2;
+    window.scrollTo({
+        top: scrollTo,
+        behavior: 'smooth'
+    });
+});
   document.querySelector('a[href="#insurancequery"]').addEventListener('click', function (e) {
     e.preventDefault();
     const section = document.querySelector('#insurancequery');

@@ -879,6 +879,10 @@ video {
   max-width: 80rem;
 }
 
+.max-w-\[100rem\]{
+  max-width: 100rem;
+}
+
 .max-w-\[60rem\]{
   max-width: 60rem;
 }
@@ -906,30 +910,6 @@ video {
 
 .max-w-xl{
   max-width: 36rem;
-}
-
-.max-w-\[55rem\]{
-  max-width: 55rem;
-}
-
-.max-w-\[80rem\]{
-  max-width: 80rem;
-}
-
-.max-w-\[90rem\]{
-  max-width: 90rem;
-}
-
-.max-w-\[100rem\]{
-  max-width: 100rem;
-}
-
-.max-w-\[95rem\]{
-  max-width: 95rem;
-}
-
-.max-w-\[96rem\]{
-  max-width: 96rem;
 }
 
 .grid-cols-1{
@@ -1206,21 +1186,6 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.py-40{
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 }
 
 .text-center{
@@ -1620,11 +1585,6 @@ html, body {
     margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .lg\:py-10{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .lg\:py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -1643,6 +1603,15 @@ html, body {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-\[27px\]{
+    font-size: 27px;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:hover\:text-\[\#007bff\]:hover{
