@@ -119,7 +119,7 @@ function myModel1() {
 }
 
 // Data to Google Sheet
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxU00nCUzD9YLCzybkojxVsKOHlHGPh0PxVqdNWXrMRdL91PJjC-gYGe0HyvNIlIhTf1A/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzaYT6r255hzr7UiC4U5u3-o-8znYZqV54LNMmvHdc5zNhFHbYU-eGT7JetGa_SxMHr/exec';
 const form = document.forms['submit-to-google-sheet'];
 const loadingIndicator = document.querySelector('.loading');
 

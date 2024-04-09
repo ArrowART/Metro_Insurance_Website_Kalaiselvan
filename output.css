@@ -912,6 +912,14 @@ video {
   max-width: 36rem;
 }
 
+.max-w-\[70rem\]{
+  max-width: 70rem;
+}
+
+.max-w-\[90rem\]{
+  max-width: 90rem;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1086,6 +1094,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\.\/assets\/images\/Layer31\.png\)\]{
   background-image: url(./assets/images/Layer31.png);
 }
@@ -1213,10 +1226,6 @@ video {
 
 .text-\[17px\]{
   font-size: 17px;
-}
-
-.text-\[27px\]{
-  font-size: 27px;
 }
 
 .text-lg{
@@ -1590,6 +1599,11 @@ html, body {
     padding-bottom: 8rem;
   }
 
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .lg\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -1600,18 +1614,13 @@ html, body {
     line-height: 1;
   }
 
-  .lg\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .lg\:text-\[27px\]{
     font-size: 27px;
   }
 
-  .lg\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .lg\:hover\:text-\[\#007bff\]:hover{

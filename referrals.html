@@ -20,10 +20,15 @@
               <img src="./assets/images/Metro_Logo.jpg" alt="" class="h-16 w-36">
             </h1>
           </a>
-          <div class='flex lg:order-1 max-sm:ml-auto'>
+          <div class='flex gap-4 lg:order-1 max-sm:ml-auto'>
             <a href="index.html" class="hidden sm:block">
               <button class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>
                 Buy Insurance
+              </button>
+            </a>
+            <a href="agentregistration.html" class="hidden sm:block">
+              <button class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>
+                Agent Registration
               </button>
             </a>
             <button id="toggle" class='lg:hidden ml-7'>
@@ -39,9 +44,18 @@
               <a href='index.html'
                 class='lg:hover:text-[#007bff] text-white max-lg:text-white block font-semibold text-lg'>Home</a>
             </li>
-            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='referrals.html'
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='index.html'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>About Us</a>
+            </li>
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='index.html'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Services</a>
+            </li>
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='index.html'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Insurance</a>
+            </li>
+            <!-- <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='referrals.html'
               class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Referrals</a>
-          </li>
+            </li> -->
             <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#contact'
                 class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Contact Us</a>
             </li>
@@ -50,27 +64,27 @@
       </header>
       <main>
         <section class="py-10">
-            <div class="max-w-[60rem] mx-auto p-2">
+            <div class="max-w-[70rem] mx-auto p-2">
                 <div class="py-5">
                     <h1 class="text-3xl font-semibold text-center text-blue-500">Insurance Referral System</h1>
                 </div>
-                    <form id="submit-to-google-sheet3">
-                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <h1 class="text-2xl font-bold">
+                        Welcome <span class="text-blue-500" id="customerid"></span>
+                    </h1> 
+                  </div>
+                  <div class="">
+                    <button id="addReferralButton" class="p-3 text-white bg-blue-500 rounded-lg">Add Referrals</button>
+                  </div>
+                </div>
+                
+                    <form id="submit-to-google-sheet3" style="display: none;">
+                        <div class="grid grid-cols-1 gap-5 py-5 lg:grid-cols-2">
                             <div>
-                                <label for="address">Customer ID:</label>
+                                <label for="address">Your Customer ID:</label>
                                 <input type="text" id="customerid" name="customerid" placeholder="Enter Customer ID" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
                                 
-                                <label for="personName">Name:</label>
-                                <input type="text" id="personName" name="personName" placeholder="Enter your name" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-                            
-                                <label for="personEmail">Email:</label>
-                                <input type="email" id="personEmail" name="personEmail" placeholder="Enter Email address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-
-                                <label for="mobilenumber">Mobile Number:</label>
-                                <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Enter Mobile Number" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-
-                                <label for="address">Address:</label>
-                                <input type="text" id="address" name="address" placeholder="Enter Address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
                             </div>
                             <div>
                                 <label for="referralPersonName">Referral Person's Name:</label>
@@ -169,6 +183,7 @@
       </footer>
     
 </body>
+<script src="./js/agentpage.js"></script>
 <script src="./js/referral.js"></script>
 <script src="./js/script.js"></script>
 </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Metro Insurance</title>
+    <link rel="icon" type="image" href="./assets/images/Metro_Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class='sticky top-0 z-20 shadow-md py-4 px-4 sm:px-10 bg-[#004CA1] min-h-[70px]'>
+        <div class='relative flex flex-wrap items-center justify-between gap-5'>
+          <a href="index.html">
+            <h1 class="text-3xl font-bold text-white">
+              <img src="./assets/images/Metro_Logo.jpg" alt="" class="h-16 w-36">
+            </h1>
+          </a>
+          <div class='flex gap-4 lg:order-1 max-sm:ml-auto'>
+            <a href="index.html" class="hidden sm:block">
+              <button class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>
+                Buy Insurance
+              </button>
+            </a>
+            <a href="agentregistration.html" class="hidden sm:block">
+                <button class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>
+                  Agent Registration
+                </button>
+              </a>
+            <button id="toggle" class='lg:hidden ml-7'>
+              <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <ul id="collapseMenu" class='lg:!flex lg:space-x-5 max-lg:space-y-2 max-lg:hidden max-lg:py-4 max-lg:w-full'>
+            <li class='max-lg:border-b max-lg:bg-[#007bff] max-lg:py-2 px-3 max-lg:rounded'>
+              <a href='index.html'
+                class='lg:hover:text-[#007bff] text-white max-lg:text-white block font-semibold text-lg'>Home</a>
+            </li>
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='index.html'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>About Us</a>
+            </li>
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='index.html'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Services</a>
+            </li>
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='index.html'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Insurance</a>
+            </li>
+            <!-- <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='referrals.html'
+              class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Referrals</a>
+          </li> -->
+            <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#contact'
+                class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <section class="py-10">
+            <div class="max-w-[60rem] mx-auto p-2">
+                <div class="py-5">
+                    <h1 class="text-3xl font-semibold text-center text-blue-500">Agent Registration</h1>
+                </div>
+                
+                    <form id="submit-to-google-sheet4">
+                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                            <div>
+                                <label for="FullName">Full Name:</label>
+                                <input type="text" id="FullName" name="FullName" placeholder="Enter Your FullName" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                                
+                                <label for="Qualification">Educational Qualification:</label>
+                                <input type="text" id="Qualification" name="Qualification" placeholder="Enter Educational Qualification" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                                
+                                <label for="personEmail">Email:</label>
+                                <input type="email" id="Email" name="Email" placeholder="Enter Email address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+
+                                <label for="mobilenumber">Mobile Number:</label>
+                                <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Enter Contact Number" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+
+                                <label for="address">Residential Address:</label>
+                                <input type="text" id="address" name="address" placeholder="Enter Address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                            </div>
+                            <div>
+                                <label for="gender">Gender :</label>
+                                <select id="gender" name="gender" placeholder="Enter Email address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                                    <option value="">Select the gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                                
+                                <label for="dob">Date Of Birth:</label>
+                                <input type="date" id="dob" name="dob" placeholder="Enter DOB" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+
+                                <label for="aadharnumber">Aadhar Number:</label>
+                                <input type="text" id="aadharnumber" name="aadharnumber" placeholder="Enter Aadhar Number" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                                
+                                <label for="pannumber">PAN Number:</label>
+                                <input type="text" id="pannumber" name="pannumber" placeholder="Enter PAN Number" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                                
+                                <label for="customerid">Customer ID:</label>
+                                <input type="text" id="customerid" name="customerid" placeholder="Click Generate Customer ID"  class="w-full p-3 my-3 bg-gray-100 rounded-md" required readonly>
+                                
+                                <button type="button" class="p-3 bg-[#024BA2] text-white rounded-lg my-3" onclick="generateCustomerId()">Generate Customer ID</button>
+                                <button type="submit" value="Submit" id="submit" class="p-3 text-white bg-[#121D32] rounded-lg">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="loading2">
+                        <img src="./assets/images/772.gif" alt="Loading...">
+                    </div>
+            </div>  
+        </section>
+      </main>
+    
+</body>
+<script src="./js/agentregister.js"></script> 
+<script src="./js/script.js"></script>
+
+</html>

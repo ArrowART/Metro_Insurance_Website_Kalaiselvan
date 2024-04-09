@@ -20,10 +20,15 @@
           <img src="./assets/images/Metro_Logo.jpg" alt="" class="h-16 w-36">
         </h1>
       </a>
-      <div class='flex lg:order-1 max-sm:ml-auto'>
+      <div class='flex gap-4 lg:order-1 max-sm:ml-auto'>
         <a href="#buyinsurance" class="hidden sm:block">
           <button class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>
             Buy Insurance
+          </button>
+        </a>
+        <a href="agentregistration.html" class="hidden sm:block">
+          <button class='px-4 py-2 text-lg rounded-lg font-bold text-[#004CA1] border-2 bg-white transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white'>
+            Agent Registration
           </button>
         </a>
         <button id="toggle" class='lg:hidden ml-7'>
@@ -48,9 +53,9 @@
         <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#insurancequery'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Insurance</a>
         </li>
-        <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='referrals.html'
+        <!-- <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='referrals.html'
           class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Referrals</a>
-      </li>
+        </li> -->
         <li class='px-3 max-lg:border-b max-lg:py-2 max-lg:rounded'><a href='#contact'
             class='lg:hover:text-[#007bff] text-white block font-semibold text-lg'>Contact Us</a>
         </li>
@@ -107,8 +112,8 @@
                     </select>
                     <input type="text" name="Full-name"  placeholder="Full name" class="w-full p-3 my-3 rounded-md" required>
                     <input type="email" name="Email"  placeholder="Email address" class="w-full p-3 rounded-md" required>
-                    <input type="text" name="Contactnumber"  placeholder="Email Mobile number" class="w-full p-3 my-3 rounded-md" required>
-                    <input type="text" name="Location"  placeholder="Email your Address" class="w-full p-3 rounded-md" required>
+                    <input type="text" name="Contactnumber"  placeholder="Mobile number" class="w-full p-3 my-3 rounded-md" required>
+                    <input type="text" name="Location"  placeholder="Enter Address" class="w-full p-3 rounded-md" required>
            
                     <div class="my-4">
                       <button type="submit" value="Submit" id="submit" class="rounded-md p-2 w-fit bg-[#11B0C9] hover:bg-[#024BA2] text-white text-lg ">Submit Now</button>
