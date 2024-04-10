@@ -35,11 +35,3 @@ function generateReferral() {
     document.getElementById('referralID').value = referralID;
   }
   
-  document.addEventListener('DOMContentLoaded', function () {
-    const addReferralButton = document.getElementById('addReferralButton');
-    const form = document.getElementById('submit-to-google-sheet3');
-    
-    addReferralButton.addEventListener('click', function () {
-        form.style.display = 'block'; // Show the form when the button is clicked
-    });
-});

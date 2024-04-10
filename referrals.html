@@ -64,57 +64,59 @@
       </header>
       <main>
         <section class="py-10">
-            <div class="max-w-[70rem] mx-auto p-2">
-                <div class="py-5">
-                    <h1 class="text-3xl font-semibold text-center text-blue-500">Insurance Referral System</h1>
-                </div>
-                <div class="flex items-center justify-between">
-                  <div class="">
-                    <h1 class="text-2xl font-bold">
-                        Welcome <span class="text-blue-500" id="customerid"></span>
-                    </h1> 
+          <div class="max-w-[70rem] mx-auto p-2">
+              <div class="py-5">
+                  <h1 class="text-3xl font-semibold text-center text-blue-500">Insurance Referral System</h1>
+              </div>
+              <div class="flex items-center justify-between">
+                  <div>
+                      <h1 class="text-2xl font-bold">
+                          Welcome <span class="text-blue-500" id="customerid"></span>
+                      </h1>
                   </div>
-                  <div class="">
-                    <button id="addReferralButton" class="p-3 text-white bg-blue-500 rounded-lg">Add Referrals</button>
-                  </div>
-                </div>
-                
-                    <form id="submit-to-google-sheet3" style="display: none;">
-                        <div class="grid grid-cols-1 gap-5 py-5 lg:grid-cols-2">
-                            <div>
-                                <label for="address">Your Customer ID:</label>
-                                <input type="text" id="customerid" name="customerid" placeholder="Enter Customer ID" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-                                
-                            </div>
-                            <div>
-                                <label for="referralPersonName">Referral Person's Name:</label>
-                                <input type="text" id="referralPersonName" name="referralPersonName" placeholder="Enter Referral's Name" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-                                
-                                <label for="referralPersonName">Referral Person's DOB:</label>
-                                <input type="date" id="referralPersondob" name="referralPersondob" placeholder="Enter Referral's DOB" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-                                
-                                <label for="referralpersonEmail">Email:</label>
-                                <input type="email" id="referralpersonEmail" name="referralpersonEmail" placeholder="Enter Email address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-                               
-                                <label for="referralmobilenumber">Mobile Number:</label>
-                                <input type="text" id="referralMobileNumber" name="referralMobileNumber" placeholder="Enter Mobile Number" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
 
-                                <label for="referraladdress">Address</label>
-                                <input type="text" id="referralAddress" name="referralAddress" placeholder="Enter Address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
-
-                                <label for="referralID">Referral ID:</label>
-                                <input type="text" id="referralID" name="referralID" placeholder="Click Generate Referral ID"  class="w-full p-3 my-3 bg-gray-100 rounded-md" required readonly>
-                                
-                                <button type="button" class="p-3 bg-[#024BA2] text-white rounded-lg my-3" onclick="generateReferral()">Generate Referral ID</button>
-                                <button type="submit" value="Submit" id="submit" class="p-3 text-white bg-[#121D32] rounded-lg">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="loading2">
-                        <img src="./assets/images/772.gif" alt="Loading...">
+              </div>
+              <div class="py-5 space-y-5">
+                <!-- Link -->
+                <p class="mr-4 font-semibold text-blue-500" id="linkText"> <span class="text-black">Link:</span>  <a href="#" id="customerLink" target="_blank">Click here</a></p>
+                <!-- QR Code -->
+                <canvas id="qrCodeCanvas" class="inline-block"></canvas>
+            </div>
+              <form id="submit-to-google-sheet3">
+                  <div class="grid grid-cols-1 gap-5 py-5 lg:grid-cols-2">
+                      
+                      <div>
+                          <label for="address">Referred By:</label>
+                          <input type="text" id="referredby" name="referredby" placeholder="Enter Customer ID" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                     
+                          <label for="referralPersonName">Referral Person's Name:</label>
+                          <input type="text" id="referralPersonName" name="referralPersonName" placeholder="Enter Referral's Name" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+      
+                          <label for="referralPersonName">Referral Person's DOB:</label>
+                          <input type="date" id="referralPersondob" name="referralPersondob" placeholder="Enter Referral's DOB" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+      
+                          <label for="referralpersonEmail">Email:</label>
+                          <input type="email" id="referralpersonEmail" name="referralpersonEmail" placeholder="Enter Email address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+      
+                          <label for="referralmobilenumber">Mobile Number:</label>
+                          <input type="text" id="referralMobileNumber" name="referralMobileNumber" placeholder="Enter Mobile Number" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+      
+                          <label for="referraladdress">Address</label>
+                          <input type="text" id="referralAddress" name="referralAddress" placeholder="Enter Address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+      
+                          <label for="referralID">Referral ID:</label>
+                          <input type="text" id="referralID" name="referralID" placeholder="Click Generate Referral ID"  class="w-full p-3 my-3 bg-gray-100 rounded-md" required readonly>
+      
+                          <button type="button" class="p-3 bg-[#024BA2] text-white rounded-lg my-3" onclick="generateReferral()">Generate Referral ID</button>
+                          <button type="submit" value="Submit" id="submit" class="p-3 text-white bg-[#121D32] rounded-lg">Submit</button>
                       </div>
-            </div>  
-        </section>
+                  </div>
+              </form>
+              <div class="loading2">
+                  <img src="./assets/images/772.gif" alt="Loading...">
+              </div>
+          </div>
+      </section>
       </main>
       <footer class="bg-[#004CA1]" id="contact">
         <div class="max-w-[85rem] mx-auto">
@@ -186,4 +188,30 @@
 <script src="./js/agentpage.js"></script>
 <script src="./js/referral.js"></script>
 <script src="./js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrious"></script>
+<script>
+    window.onload = function() {
+        // Fetching customer ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const customerId = urlParams.get('customerid');
+
+        // Setting customer ID in the span
+        document.getElementById('customerid').textContent = customerId;
+
+        // Setting link text
+        document.getElementById('customerLink').textContent = window.location.href;
+
+        // Generating clickable link
+        const link = document.getElementById('customerLink');
+        link.href = window.location.href;
+
+        // Generating QR Code
+        const qrCodeCanvas = document.getElementById('qrCodeCanvas');
+        new QRious({
+            element: qrCodeCanvas,
+            value: window.location.href,
+            size: 100
+        });
+    };
+</script>
 </html>
