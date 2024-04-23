@@ -6,21 +6,15 @@ const loadingIndicator = document.querySelector('.loading2');
 form.addEventListener('submit', e => {
   e.preventDefault();
   loadingIndicator.style.display = 'block';
-
-  // Generate customer ID
   const customerid = generateCustomerId();
-
-  // Append customer ID to script URL
   const scriptURLWithParams = scriptURL1 + '?customerid=' + encodeURIComponent(customerid);
-
-  // Send form data to Google Sheets script
   fetch(scriptURLWithParams, { method: 'POST', body: new FormData(form) })
     .then(response => response.json())
     .then(data => {
       loadingIndicator.style.display = 'none';
       alert("Thank you! Your form is submitted successfully.");
-      // Open new page with customer ID
-      window.open("referrals.html?customerid=" + customerid, "_blank");
+      window.location.href = "referrals.html?customerid=" + customerid; 
+      // window.open("referrals.html?customerid=" + customerid, "_blank");
     })
     .catch(error => {
       console.error('Error!', error.message);
@@ -38,3 +32,25 @@ function generateCustomerId() {
     document.getElementById('customerid').value = customerid; // Update the input field
     return customerid; // Return the generated customer ID
   }
+
+  // Function to validate Aadhar number format
+function validateAadharFormat(aadharNumber) {
+  var aadharRegex = /^\d{0,4}-?\d{0,4}-?\d{0,4}$/;
+  return aadharRegex.test(aadharNumber);
+}
+function formatAadharNumber(input) {
+  var value = input.value.replace(/\D/g, '');
+  var formattedValue = value.slice(0, 12).replace(/(\d{4})(\d{0,4})?(\d{0,4})?/, function(match, p1, p2, p3) {
+    return [p1, p2 ? '-' + p2 : '', p3 ? '-' + p3 : ''].join('');
+  });
+  input.value = formattedValue;
+}
+document.getElementById('aadharnumber').addEventListener('input', function(event) {
+  var input = event.target;
+  formatAadharNumber(input);
+  if (!validateAadharFormat(input.value)) {
+    input.setCustomValidity('Please enter a valid Aadhar number in the format 0000-0000-0000');
+  } else {
+    input.setCustomValidity('');
+  }
+});
