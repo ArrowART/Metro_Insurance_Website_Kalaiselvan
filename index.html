@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./node_modules/@flaticon/flaticon-uicons/css/all/all.css">
   <link href="https://cdn.jsdelivr.net/npm/flat-icons@1.0/creative.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./vendors/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./vendors/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
   <header class='sticky top-0 z-20 shadow-md py-4 px-4 sm:px-10 bg-[#004CA1] min-h-[70px]'>
@@ -114,8 +116,8 @@
               <!-- Modal body -->
               <div class="max-w-xl p-4 mx-auto rounded-md ">
                   <form name="submit-to-google-sheet">
-                    <label for="" class="text-lg text-white">Select Date & Time</label>
-                    <input type="datetime-local" id="datetime" name="datetime" class="w-full p-3 my-3 rounded-md" required>
+                    <label for="datetime1" class="text-lg text-white">Select Date & Time</label>
+                    <input type="text" id="datetime1" name="datetime" placeholder="Select the Date and Time" class="w-full p-3 my-3 rounded-md" required>
                     <select name="Insurance"  class="w-full p-3 rounded-md" required>
                       <option value="">Select type of Insurance</option>
                       <option value="Car Insurance">Car Insurance</option>
@@ -160,8 +162,8 @@
               <!-- Modal body -->
               <div class="max-w-xl p-4 mx-auto rounded-md ">
                 <form name="submit-to-google-sheet3" onsubmit="sendFormData(event)">
-                  <label for="" class="text-lg text-white">Select Date & Time</label>
-                  <input type="datetime-local" id="datetime" name="datetime1" class="w-full p-3 my-3 rounded-md" required>
+                  <label for="datetime1" class="text-lg text-white">Select Date & Time</label>
+                  <input type="text" id="datetime1" name="datetime1" placeholder="Select Date and Time" class="w-full p-3 my-3 rounded-md" required>
                   <select name="Insurance1" class="w-full p-3 rounded-md" required>
                     <option value="">Select type of Insurance</option>
                     <option value="Car Insurance">Car Insurance</option>
@@ -620,8 +622,9 @@
             </div>
             <div class="my-5">
             <form name="submit-to-google-sheet1">
-              <label for="" class="text-lg text-white">Select Date & Time</label>
-              <input type="datetime-local" id="datetime1" name="datetime" class="w-full p-3 my-3 rounded-md" required>
+              <label for="datetime1" class="text-lg text-white">Select Date & Time</label>
+              <input type="text" id="datetime1" name="datetime" placeholder="Select date and Time" class="w-full p-3 my-3 rounded-md" required>
+              
               <select name="Insurance"  class="w-full p-3 rounded-md" required>
                 <option value="">Select type of Insurance</option>
                 <option value="Car Insurance">Car Insurance</option>
@@ -748,6 +751,14 @@
         spaceBetween: 40,
       },
     },
+  });
+</script>
+<script>
+  flatpickr("#datetime1", {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      minDate: "today",
+      minTime: new Date().toLocaleTimeString().split(":").slice(0, 2).join(":")
   });
 </script>
 </html>
