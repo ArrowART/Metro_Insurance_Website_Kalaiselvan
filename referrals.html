@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./node_modules/@flaticon/flaticon-uicons/css/all/all.css">
     <link href="https://cdn.jsdelivr.net/npm/flat-icons@1.0/creative.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./vendors/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
   <header class='sticky top-0 z-20 shadow-md py-4 px-4 sm:px-10 bg-[#004CA1] min-h-[70px]'>
@@ -114,7 +116,7 @@
                           <input type="text" id="referralPersonName" name="referralPersonName" placeholder="Enter Referral's Name" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
       
                           <label for="referralPersonName">Referral Person's DOB:</label>
-                          <input type="date" id="referralPersondob" name="referralPersondob" placeholder="Enter Referral's DOB" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
+                          <input type="date" id="dob" name="referralPersondob" placeholder="Enter Referral's DOB" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
       
                           <label for="referralpersonEmail">Email:</label>
                           <input type="email" id="referralpersonEmail" name="referralpersonEmail" placeholder="Enter Email address" class="w-full p-3 my-3 bg-gray-100 rounded-md" required>
@@ -248,5 +250,12 @@
     }
   }
 toggleBtn.addEventListener('click', handleClick);
+</script>
+<script>
+  flatpickr("#dob", {
+    dateFormat: "Y-m-d", 
+    //maxDate: new Date() 
+});
+
 </script>
 </html>
