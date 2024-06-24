@@ -879,6 +879,10 @@ video {
   width: 100%;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
 .max-w-4xl{
   max-width: 56rem;
 }
@@ -934,6 +938,10 @@ video {
 
 .flex-wrap{
   flex-wrap: wrap;
+}
+
+.flex-wrap-reverse{
+  flex-wrap: wrap-reverse;
 }
 
 .items-center{
