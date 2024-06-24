@@ -1,4 +1,4 @@
-    // Function to get URL parameter by name
+
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
@@ -9,8 +9,7 @@
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
     
-    // Retrieve customer ID from URL query parameter
-    var customerID = getParameterByName('customerid');
     
-    // Update the content of the span element with the customer ID
+    var customerID = getParameterByName('customerid');
+ 
     document.getElementById('customerid').innerText = customerID;

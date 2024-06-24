@@ -18,20 +18,33 @@ form.addEventListener('submit', e => {
     });
 });
 
-// Function to generate referral ID and display
+
 function generateReferral() {
-    var referralPersonName = document.getElementById('referralPersonName').value;
-    var referralPersonDOB = document.getElementById('referralPersondob').value;
-  
-    // Extract first 3 letters of the name
-    var nameInitials = referralPersonName.substring(0, 3).toUpperCase();
-  
-    // Extract DOB in the format DDMMYYYY
-    var dob = referralPersonDOB.split('-').reverse().join('').substring(0, 8);
-  
-    // Generate referral ID in the custom format
-    var referralID = 'REF-' + nameInitials + dob + '-METRO';
-    
-    document.getElementById('referralID').value = referralID;
+  var referralPersonName = document.getElementById('referralPersonName')?.value;
+  var referralPersonDOB = document.getElementById('dob')?.value;
+
+  if (!referralPersonName || !referralPersonDOB) {
+    console.error('Name or DOB is missing.');
+    return;
   }
-  
+
+  var nameInitials = referralPersonName.substring(0, 3).toUpperCase();
+
+  var dobParts = referralPersonDOB.split('-');
+  if (dobParts.length !== 3) {
+    console.error('Invalid DOB format.');
+    return;
+  }
+
+  var dob = dobParts.reverse().join('').substring(0, 8);
+
+  var referralID = 'REF-' + nameInitials + dob + '-METRO';
+
+  var referralIDElement = document.getElementById('referralID');
+  if (referralIDElement) {
+    referralIDElement.value = referralID;
+  } else {
+    console.error('Element with id "referralID" not found.');
+  }
+}
+ 

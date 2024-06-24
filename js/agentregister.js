@@ -30,10 +30,10 @@ function generateCustomerId() {
     var dobReversed = dob.split('-').reverse().join('').substring(0, 8);
     var customerid = nameInitials + dobReversed + '-METRO';
     document.getElementById('customerid').value = customerid; // Update the input field
-    return customerid; // Return the generated customer ID
+    return customerid;
   }
 
-  // Function to validate Aadhar number format
+
 function validateAadharFormat(aadharNumber) {
   var aadharRegex = /^\d{0,4}-?\d{0,4}-?\d{0,4}$/;
   return aadharRegex.test(aadharNumber);
